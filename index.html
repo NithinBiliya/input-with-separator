@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="script.js"></script>
+    <script src="inputWithSeparator.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <div ng-controller="myCtrl">
+      <button type="button" class="btn btn-primary btn-md" ng-click="assignGlobal(12121212121);">Assign International</button>
+      <button type="button" class="btn btn-primary btn-md" ng-click="assignIndian(131313131131);">Assign Indian</button>
+      <pre>International number system: <input-with-separator ng-model="foo" number-system="International"></input-with-separator></pre>
+      <pre>Indian number system: <input-with-separator ng-model="doo" number-system="Indian"></input-with-separator></pre>
+      foo - {{foo}}
+      doo - {{doo}}
+    </div>
+  </body>
+
+</html>
