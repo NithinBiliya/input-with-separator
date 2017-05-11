@@ -20,7 +20,7 @@ angular.module('input.with.separator', [])
       scope.onChange = function() {
         if (!ngModel) return;
         var numberSystem = attrs.numberSystem;
-        if (typeof(scope.value) == "undefined") {
+        if (angular.isUndefined(scope.value)) {
           return;
         }
         var inputString = scope.value.toString();
@@ -29,7 +29,7 @@ angular.module('input.with.separator', [])
           var decimalCount = 0;
           var lastChac = "";
           var numberString = "";
-          for (i = 0; i < inputNumber.length; i++) {
+          for (var i = 0; i < inputNumber.length; i++) {
             lastChac = inputNumber.charAt(i);
             if (lastChac == ".") {
               if (decimalCount <= 0) {

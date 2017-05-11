@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- build:css styles/lib.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/app.css -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <title>Input with separator</title>
+  </head>
+
+  <body ng-app="myApp">
+    <div ng-controller="myBasicController as vm">
+      <button type="button" class="btn btn-primary btn-md" ng-click="vm.assignGlobal(12121212121);">Assign International</button>
+      <button type="button" class="btn btn-primary btn-md" ng-click="vm.assignIndian(131313131131);">Assign Indian</button>
+      <pre>International number system: <input-with-separator ng-model="vm.foo" number-system="International"></input-with-separator></pre>
+      <pre>Indian number system: <input-with-separator ng-model="vm.doo" number-system="Indian"></input-with-separator></pre>
+      foo - {{vm.foo}}
+      doo - {{vm.doo}}
+    </div>
+
+    <!-- build:js js/lib.js -->
+    <!-- bower:js -->
+    <script src="lib/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js js/app.js -->
+    <!-- inject:js -->
+    <script src="js/inputWithSeparator.js"></script>
+    <script src="js/script.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+
+</html>
