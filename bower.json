@@ -1,7 +1,7 @@
 {
   "name": "input-with-separator",
   "description": "Creates an input field which automatically adds comma to separate out the digits in with Indian or International number system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/inputWithSeparator.min.js",
   "authors": [
     "Nithin Biliya"

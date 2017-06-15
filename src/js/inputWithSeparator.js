@@ -7,10 +7,12 @@ angular.module('input.with.separator', [])
     restrict: 'E',
     scope: {
       numberSystem: '=',
-      model: '=ngModel'
+      model: '=ngModel',
+      disabled: '=ngDisabled',
+      required: '=ngRequired'
     },
     require: "?ngModel",
-    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false'>",
+    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required'>",
     link: function(scope, element, attrs, ngModel) {
 
       scope.$watch("model", function() {
