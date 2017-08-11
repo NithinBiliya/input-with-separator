@@ -13,7 +13,7 @@ angular.module('input.with.separator', [])
       clazz: '=ngClass'
     },
     require: "?ngModel",
-    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='class'>",
+    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz'>",
     link: function(scope, element, attrs, ngModel) {
 
       scope.$watch("model", function() {
