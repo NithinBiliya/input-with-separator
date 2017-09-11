@@ -10,7 +10,7 @@ angular.module('input.with.separator', [])
       model: '=ngModel',
       disabled: '=ngDisabled',
       required: '=ngRequired',
-      clazz: '=ngClass'
+      clazz: '='
     },
     require: "?ngModel",
     template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz'>",
