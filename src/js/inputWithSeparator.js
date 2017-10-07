@@ -24,6 +24,7 @@ angular.module('input.with.separator', [])
         if (!ngModel) return;
         var numberSystem = attrs.numberSystem;
         if (angular.isUndefined(scope.value)) {
+          scope.model = undefined;
           return;
         }
         var inputString = scope.value.toString();
