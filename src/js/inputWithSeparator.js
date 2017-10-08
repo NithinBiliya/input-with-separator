@@ -2,7 +2,7 @@
 
 angular.module('input.with.separator', [])
 
-.directive('inputWithSeparator', function() {
+.directive('inputWithSeparator', [function() {
   return {
     restrict: 'E',
     scope: {
@@ -10,10 +10,11 @@ angular.module('input.with.separator', [])
       model: '=ngModel',
       disabled: '=ngDisabled',
       required: '=ngRequired',
+      blur: '&ngBlur',
       clazz: '='
     },
     require: "?ngModel",
-    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz'>",
+    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz' ng-blur='blur()'>",
     link: function(scope, element, attrs, ngModel) {
 
       scope.$watch("model", function() {
@@ -86,6 +87,6 @@ angular.module('input.with.separator', [])
 
     }
   };
-});
+}]);
 
 })();
