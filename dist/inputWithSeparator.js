@@ -11,10 +11,11 @@ angular.module('input.with.separator', [])
       disabled: '=ngDisabled',
       required: '=ngRequired',
       blur: '&ngBlur',
+      focus: '&ngFocus',
       clazz: '='
     },
     require: "?ngModel",
-    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz' ng-blur='blur()'>",
+    template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz' ng-blur='blur()' ng-focus='focus()'>",
     link: function(scope, element, attrs, ngModel) {
 
       scope.$watch("model", function() {
@@ -23,6 +24,7 @@ angular.module('input.with.separator', [])
 
       scope.onChange = function() {
         if (!ngModel) return;
+        if(scope.value==null || angular.isUndefined(scope.value)) return;
         var numberSystem = attrs.numberSystem;
         if (angular.isUndefined(scope.value)) {
           scope.model = undefined;

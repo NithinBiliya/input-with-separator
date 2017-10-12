@@ -11,8 +11,11 @@ angular.module('myApp', ['input.with.separator'])
         vm.doo=num;
       }
 
-      vm.blurHandler=function() {
-        $log.info("inside blurHandler");
+      vm.blurHandler=function(para1,para2) {
+        $log.info("inside blurHandler - "+para1+" - "+para2);
+      }
+      vm.focusHandler=function(para) {
+        $log.info("inside focusHandler - "+para);
       }
 
   }])
