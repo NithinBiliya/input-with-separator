@@ -12,7 +12,7 @@ angular.module('input.with.separator', [])
       required: '=ngRequired',
       blur: '&ngBlur',
       focus: '&ngFocus',
-      clazz: '=ngClass'
+      clazz: '='
     },
     require: "?ngModel",
     template: "<input ng-model='value'  ng-change='onChange()' ng-trim='false' ng-disabled='disabled' ng-required='required' ng-class='clazz' ng-blur='blur()' ng-focus='focus()'>",
